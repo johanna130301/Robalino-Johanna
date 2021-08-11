@@ -35,7 +35,7 @@ public class JubiladoPatron extends Jubilado implements Finanzas{
     }
     @Override
     public String toString(){
-        return "Jubilado Patronal:\n"+super.toString()+"  "+this.tipoe+"  "+this.pensionp;
+        return super.toString()+"  "+this.tipoe+"  "+this.pensionp;
     }
     
     

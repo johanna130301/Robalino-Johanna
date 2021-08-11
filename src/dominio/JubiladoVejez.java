@@ -15,6 +15,6 @@ public class JubiladoVejez extends Jubilado {
     }    
     @Override
     public String toString(){
-        return "Jublilado por Vejez: \n"+super.toString()+"   "+this.pensionv;
+        return super.toString()+"   "+this.pensionv;
     }
 }

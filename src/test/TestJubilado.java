@@ -25,17 +25,33 @@ public class TestJubilado {
                 nombres = entrada.nextLine();
                 System.out.print("Anios Aporte:  ");
                 anios = entrada.nextInt();
-                datos(op, cedula, nombres, anios);
-                
+                datos(op, cedula, nombres, anios);   
             }
             if(op==4){
-                for(Jubilado jub:jubilados){
+                System.out.println("\n*** DATOS JUBILADOS PATRONAL ***\n");
+                for (Jubilado jub : jubilados) {
                     jub.calculaPensioni();
                     jub.calcularPension();
-                    if(jub instanceof JubiladoPatron){
+                    if (jub instanceof JubiladoPatron) {
                         ((JubiladoPatron) jub).bonoSueldo();
+                        System.out.println(jub);
+                    } 
+                }
+                System.out.println("\n*** DATOS JUBILADOS POR DISCAPACIDAD ***\n");
+                for (Jubilado jub : jubilados) {
+                    jub.calculaPensioni();
+                    jub.calcularPension();
+                    if (jub instanceof JubiladoDiscapacidad) {
+                        System.out.println(jub);
                     }
-                    System.out.println(jub);
+                }
+                System.out.println("\n*** DATOS JUBILADOS POR VEJEZ ***\n");
+                for (Jubilado jub : jubilados) {
+                    jub.calculaPensioni();
+                    jub.calcularPension();
+                    if (jub instanceof JubiladoVejez) {
+                        System.out.println(jub);
+                    }
                 }
             }
         } while (op != 5);

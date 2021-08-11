@@ -26,7 +26,7 @@ public class JubiladoDiscapacidad extends Jubilado {
     }
     @Override
     public String toString(){
-        return "Jubilado por Discapacidad:\n"+super.toString()+"  "+this.porcentaje+"   "+this.pensiond;
+        return super.toString()+"  "+this.porcentaje+"   "+this.pensiond;
     }
     
 }
